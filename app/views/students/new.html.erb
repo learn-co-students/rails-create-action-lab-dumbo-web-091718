@@ -1,1 +1,24 @@
-<!-- Create your form here -->
+
+<h1>Student Form</h1>
+<%= form_tag(controller: "students", action: "create") do %>
+  <%= text_field_tag(:first_name) %>
+  <%= label_tag(:first_name, "Type student's first name here:") %>
+  <%= text_field_tag(:last_name) %>
+  <%= label_tag(:last_name, "Type student's last name here:") %>
+  <%= submit_tag("Submit Student") %>
+<% end %>
+<!--
+
+ <h1>Student Form</h1>
+ <%= form_tag student_path, method: "post" do %>
+
+     <%= label_tag "first_name", "First Name" %>
+     <%= text_field_tag "first_name", @student.first_name %>
+   </div>
+
+     <%= label_tag "last_name", "Last Name" %>
+     <%= text_field_tag "last_name", @student.last_name %>
+   </div>
+
+   <%= submit_tag "Create" %>
+ <% end %> -->
